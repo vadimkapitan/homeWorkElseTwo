@@ -11,18 +11,15 @@ public class Main {
             System.out.println("Вы используете операционную систему - Android. Установите версию приложения для Android по ссылке.");
         }
         // Задача 2
-        int clientDeviceYear = 2015;
-        if (clientOS == 0) {
-            System.out.println("Вы используете операционную систему - iOS. Установите версию приложения для iOS по ссылке.");
-            if (clientDeviceYear < 2015) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            }
-        }
-        if (clientOS == 1) {
-            System.out.println("Вы используете операционную систему - Android. Установите версию приложения для Android по ссылке.");
-            if (clientDeviceYear < 2015) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке.");
-            }
+        int clientDeviceYear = 2014;
+        if (clientOS == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке.");
+        } else if (clientOS == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
+        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке.");
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке.");
         }
         // Задача 3
         int year = 2020;
@@ -69,7 +66,9 @@ public class Main {
             default:
                 System.out.println("Такого месяца нет.");
             }
-        }
-    }
+            }
+            }
+
+    
 
 
